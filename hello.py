@@ -24,8 +24,11 @@ __license__ = "Unlicense"
 
 import os
 
-
-current_language = os.getenv("LANG", "en_US")[:5]
+"""
+ [:5] é um fatiamento, pega as cinco primeiras letras da variável 
+ de ambiente LANG
+""" 
+current_language = os.getenv("LANG", "en_US")[:5] 
 
 msg = "Hello, World!"
 
