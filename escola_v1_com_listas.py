@@ -33,6 +33,6 @@ for nome_atividade, atividade in atividades:
         elif aluno in sala02:
             atividade_sala02.append(aluno)
 
-    print(f"Sala 01 ", atividade_sala01)
-    print(f"Sala 02 ", atividade_sala02)
+    print("Sala 01 ", atividade_sala01)
+    print("Sala 02 ", atividade_sala02)
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """Imprime a tabuada do 1 ao 10.
 
 ----Tabuada do 1----
@@ -29,6 +29,7 @@ numeros = list(range(1, 11))
 # para cada numero em numeros
 
 for numero01 in numeros:
+    # "{:-^19}" = centralizar e colocar o caracter "-" x vezes
     print("{:-^19}".format(f"Tabuada do {numero01:02d}"))
     print()
     for numero02 in numeros:
