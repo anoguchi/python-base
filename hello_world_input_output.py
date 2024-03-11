@@ -47,8 +47,8 @@ if current_language is None:
     # TODO: Usar repetição
     if "LANG" in os.environ:
         current_language = os.getenv("LANG")
-        current_language = input("Choose a language:")
     else: 
+        current_language = input("Choose a language:")
 
 current_language = current_language[:5]
 
