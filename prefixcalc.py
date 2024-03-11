@@ -54,9 +54,10 @@ if operation not in valid_operations:
     print(valid_operations)
     sys.exit(1)
 
+print(nums)
 validated_nums = []
 for num in nums:
-# TODO: Repetição com while + exceptions
+# TODO: Repetição com while + Exceptions
     if not num.replace(".","").isdigit():
         print(f"Número inválido {num}")
         sys.exit(1)
@@ -65,6 +66,7 @@ for num in nums:
     else:
         num = int(num)
     validated_nums.append(num)
+print(validated_nums)
 
 # Desempacota para ficar mais fácil de utilizar
 numero01, numero02 = validated_nums
