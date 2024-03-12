@@ -33,14 +33,26 @@ arguments = {
     "count": 1,
 }
 for arg in sys.argv[1:]:
-    # TODO: Tratar ValueError
-    key, value = arg.split("=")
+    # TODO: Logging
+    try:
+        key, value = arg.split("=")
+    except ValueError as e:
+        print(f"[ERROR] {str(e)}")
+        print("You need to use `=`")
+        print(f"You passed {arg}")
+        print("try with --key=value")
+        sys.exit(1)
+        
     key = key.lstrip("-").strip()
     value = value.strip()
+
+    # Validação
     if key not in arguments:
         print(f"Invalid Option `{key}`")
         sys.exit()
+        
     arguments[key] = value
+
 
 current_language = arguments["lang"]
 if current_language is None:
