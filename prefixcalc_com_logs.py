@@ -37,7 +37,7 @@ from datetime import datetime
 arguments = sys.argv[1:]
 
 
-# TODO: Usar Exceptions
+# Validação
 if not arguments:
     operation = input("operação:")
     numero01 = input("numero01:")
@@ -67,10 +67,16 @@ for num in nums:
         num = float(num)
     else:
         num = int(num)
+
     validated_nums.append(num)
 
-# Desempacota para ficar mais fácil de utilizar
-numero01, numero02 = validated_nums
+try:
+    # Desempacota para ficar mais fácil de utilizar
+    numero01, numero02 = validated_nums
+except ValueError as e:
+    print(str(e))
+    sys.exit(1) 
+
 
 # TODO: Usar dicionário de funções
 if operation == "sum":
@@ -88,10 +94,15 @@ filepath = os.path.join(path, "prefixcalc.log")
 timestamp = datetime.now().isoformat()
 user = os.getenv('USER', 'anonymous')
 
-with open(filepath, "a") as file_:
-    file_.write(f"{timestamp} - {user} - {operation}, {numero01},{numero02} = {result}\n")
+print(f"O resultado é {result}")
 
+try:
+    with open(filepath, "a") as file_:
+        file_.write(f"{timestamp} - {user} - {operation}, {numero01},{numero02} = {result}\n")
+except PermissionError as e:
+    print(str(e))
+    sys.exit(1)
+    
 # print(f"{operation}, {numero01},{numero02} = {result}", file=open(filename, "a"))    
 
-print(f"O resultado é {result}")
     

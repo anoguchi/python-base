@@ -72,5 +72,20 @@ msg = {
     "es_SP": "Hola, Mundo!",
     "fr_FR": "Bonjour, Monde!",
 }
-print(msg[current_language] * int(arguments["count"]))
+
+"""
+# Try com valor default
+message = msg.get(current_language, msg["en_US"])
+"""
+
+# EAFP
+try:
+    message = msg[current_language]
+except KeyError as e:
+    print(f"[ERROR] {str(e)}")
+    print(f"Language is invalid, choose from: {list(msg.keys())}")
+    sys.exit(1)
+
+
+print(msg * int(arguments["count"]))
 
