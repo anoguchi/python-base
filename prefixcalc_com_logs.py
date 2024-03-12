@@ -24,7 +24,7 @@ numero01: 5
 numero02 : 4
 9
 
-Os resultados serão salvos em `infixcalc.log`
+Os resultados serão salvos em `prefixcalc.log`
 """
 
 __version__ = "0.1.0"
@@ -84,7 +84,7 @@ elif operation == "div":
 
 
 path = os.curdir
-filepath = os.path.join(path, "infixcalc.log")
+filepath = os.path.join(path, "prefixcalc.log")
 timestamp = datetime.now().isoformat()
 user = os.getenv('USER', 'anonymous')
 

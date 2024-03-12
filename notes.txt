@@ -1,3 +1,7 @@
 Minha primeira nota	geral	Minha primeira note para teste.
 Minha segunda nota	tech	Python é show de bola!
 Minha terceira nota	esporte	Vai Corinthians!
+CS2	fps	[A[B
+Valorant	fps	Valorant esta ficando muto chato
+Formula	esporte	F1 está ficando muito chato
+Formula	esporte	Max é foda!

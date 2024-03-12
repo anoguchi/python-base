@@ -34,7 +34,7 @@ if arguments[0] == "read":
     # leitura
     for line in open(filepath):
         titulo, tag, texto = line.split("\t")
-        if tag == arguments[1].lower():
+        if tag.lower() == arguments[1].lower():
             print("-" * 30)
             print()
             print(f"titulo: {titulo}")
