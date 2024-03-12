@@ -1,0 +1,24 @@
+2024-03-12 18:43:59,260 Beto DEBUG l:28 f:logs.py: Mensagem para o desenvolvedor, qe, sysadmin
+2024-03-12 18:43:59,260 Beto INFO l:29 f:logs.py: Mensagem geral para usuários
+2024-03-12 18:43:59,260 Beto WARNING l:30 f:logs.py: Aviso que não causa erro
+2024-03-12 18:43:59,260 Beto ERROR l:31 f:logs.py: Erro que afeta uma unica execução
+2024-03-12 18:43:59,260 Beto CRITICAL l:32 f:logs.py: Erro geral ex: banco de dados sumiu
+2024-03-12 18:43:59,260 Beto ERROR l:39 f:logs.py: Deu erro division by zero
+2024-03-12 18:44:03,176 Beto DEBUG l:28 f:logs.py: Mensagem para o desenvolvedor, qe, sysadmin
+2024-03-12 18:44:03,176 Beto INFO l:29 f:logs.py: Mensagem geral para usuários
+2024-03-12 18:44:03,176 Beto WARNING l:30 f:logs.py: Aviso que não causa erro
+2024-03-12 18:44:03,176 Beto ERROR l:31 f:logs.py: Erro que afeta uma unica execução
+2024-03-12 18:44:03,176 Beto CRITICAL l:32 f:logs.py: Erro geral ex: banco de dados sumiu
+2024-03-12 18:44:03,176 Beto ERROR l:39 f:logs.py: Deu erro division by zero
+2024-03-12 18:44:04,122 Beto DEBUG l:28 f:logs.py: Mensagem para o desenvolvedor, qe, sysadmin
+2024-03-12 18:44:04,122 Beto INFO l:29 f:logs.py: Mensagem geral para usuários
+2024-03-12 18:44:04,122 Beto WARNING l:30 f:logs.py: Aviso que não causa erro
+2024-03-12 18:44:04,122 Beto ERROR l:31 f:logs.py: Erro que afeta uma unica execução
+2024-03-12 18:44:04,122 Beto CRITICAL l:32 f:logs.py: Erro geral ex: banco de dados sumiu
+2024-03-12 18:44:04,122 Beto ERROR l:39 f:logs.py: Deu erro division by zero
+2024-03-12 18:44:04,752 Beto DEBUG l:28 f:logs.py: Mensagem para o desenvolvedor, qe, sysadmin
+2024-03-12 18:44:04,752 Beto INFO l:29 f:logs.py: Mensagem geral para usuários
+2024-03-12 18:44:04,752 Beto WARNING l:30 f:logs.py: Aviso que não causa erro
+2024-03-12 18:44:04,753 Beto ERROR l:31 f:logs.py: Erro que afeta uma unica execução
+2024-03-12 18:44:04,753 Beto CRITICAL l:32 f:logs.py: Erro geral ex: banco de dados sumiu
+2024-03-12 18:44:04,753 Beto ERROR l:39 f:logs.py: Deu erro division by zero
