@@ -21,13 +21,9 @@ __author__ = "Alberto"
 
 # numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # Iterable (percorriveis)
-numeros = list(range(1, 11))
-
-
-
+numeros = range(1, 11)
 
 # para cada numero em numeros
-
 for numero01 in numeros:
     # "{:-^19}" = centralizar e colocar o caracter "-" x vezes
     print("{:-^19}".format(f"Tabuada do {numero01:02d}"))
