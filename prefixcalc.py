@@ -31,55 +31,59 @@ __author__ = "Alberto"
 
 import sys
 
-arguments = sys.argv[1:]
 
-
-# TODO: Usar Exceptions
-if not arguments:
-    operation = input("operação:")
-    numero01 = input("numero01:")
-    numero02 = input("numero02:")
-    arguments = [operation, numero01, numero02]
-elif len(arguments) != 3:
-    print("Número de argumentos inválidos")
-    print("ex: `sum 5 5`")
-    sys.exit(1)
-
-operation, *nums = arguments
-
-valid_operations = ("sum", "sub", "mul", "div")
-
-if operation not in valid_operations:
-    print("Operação inválida")
-    print(valid_operations)
-    sys.exit(1)
-
-print(nums)
-validated_nums = []
-for num in nums:
-# TODO: Repetição com while + Exceptions
-    if not num.replace(".","").isdigit():
-        print(f"Número inválido {num}")
+while True:
+    arguments = sys.argv[1:]    
+    # Validação
+    if not arguments:
+        operation = input("operação:")
+        numero01 = input("numero01:")
+        numero02 = input("numero02:")
+        arguments = [operation, numero01, numero02]
+    elif len(arguments) != 3:
+        print("Número de argumentos inválidos")
+        print("ex: `sum 5 5`")
         sys.exit(1)
-    if "." in num:
-        num = float(num)
-    else:
-        num = int(num)
-    validated_nums.append(num)
-print(validated_nums)
 
-# Desempacota para ficar mais fácil de utilizar
-numero01, numero02 = validated_nums
+    operation, *nums = arguments
 
-# TODO: Usar dicionário de funções
-if operation == "sum":
-    result = numero01 + numero02
-elif operation == "sub":
-    result = numero01 - numero02
-elif operation == "mul":
-    result = numero01 * numero02
-elif operation == "div":
-    result = numero01 / numero02
+    valid_operations = ("sum", "sub", "mul", "div")
 
-print(f"O resultado é {result}")
-    
+    if operation not in valid_operations:
+        print("Operação inválida")
+        print(valid_operations)
+        sys.exit(1)
+
+    print(nums)
+    validated_nums = []
+    for num in nums:
+    # TODO: Repetição com while + Exceptions
+        if not num.replace(".","").isdigit():
+            print(f"Número inválido {num}")
+            sys.exit(1)
+        if "." in num:
+            num = float(num)
+        else:
+            num = int(num)
+        validated_nums.append(num)
+    print(validated_nums)
+
+    # Desempacota para ficar mais fácil de utilizar
+    numero01, numero02 = validated_nums
+
+    # TODO: Usar dicionário de funções
+    if operation == "sum":
+        result = numero01 + numero02
+    elif operation == "sub":
+        result = numero01 - numero02
+    elif operation == "mul":
+        result = numero01 * numero02
+    elif operation == "div":
+        result = numero01 / numero02
+
+    print(f"O resultado é {result}")
+
+    continuar = input(f"Quer fazer nova operação? [N/y]").strip().lower()
+    if continuar != "y":
+        break
+        

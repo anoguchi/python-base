@@ -1,0 +1,8 @@
+id: tipos-de-instrucoes
+title: Tipos de instruções
+sidebar_position: 4
+---
+
+# Tipos de instruções
+
+## Expressões (expressions)

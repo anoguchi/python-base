@@ -5,3 +5,7 @@ CS2	fps	[A[B
 Valorant	fps	Valorant esta ficando muto chato
 Formula	esporte	F1 está ficando muito chato
 Formula	esporte	Max é foda!
+Testando novo	teste	testando
+Repeticoes	python	While e for para repetir
+Logitech Is Cool	tech	Logictech hahahahsha sdaisdajs daos dajisd asd
+Meu Post Legal	geral	Hello
