@@ -31,6 +31,7 @@ mensagem informando que já está reservado.
 import sys
 import logging
 
+# Acesso ao banco de dados
 ocupados = {}
 try:
     for line in open("reservas.txt"):
@@ -57,7 +58,7 @@ except FileNotFoundError:
     sys.exit(1)
 
 
-
+# Programa principal
 print("Reserva Hotel Pythonico")
 print("-" * 40)
 
