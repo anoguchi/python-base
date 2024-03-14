@@ -32,6 +32,7 @@ import sys
 import logging
 
 # Acesso ao banco de dados
+# Fazer o parsing, info do banco para uma estrutura de dados python
 ocupados = {}
 try:
     for line in open("reservas.txt"):
@@ -68,13 +69,16 @@ if len(ocupados) == len(quartos):
 
 nome = input("Nome do cliente: ").strip()
 print("Lista de quartos:")
+print()
+head = ["Número", "Nome do Quarto", "Preço", "Disponível"]
+print(f"{head[0]:<6} - {head[1]:<14} - R$ {head[2]:<9} - {head[3]:<10}")
 for codigo, dados in quartos.items():
     nome_quarto = dados["nome"]
     preco = dados["preco"]
     disponivel = "⛔" if not dados["disponivel"] else "👍"
     # disponivel = dados["disponivel"] and "👍" or "⛔"
     # TODO: Substituir casa decimal por virgula
-    print(f"{codigo} - {nome_quarto} - R$ {preco:.2f} - {disponivel}")
+    print(f"{codigo:<6} - {nome_quarto:<14} - R$ {preco:<9.2f} - {disponivel:<10}")
 
 print("-" * 40)
 
