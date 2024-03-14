@@ -23,7 +23,7 @@ info = {
     "umidade": None
 }   
 
-# Para não iterar no dict original e sim em uma cópia
+# Não podemos add ou del keys,só podemos alterar os valores
 keys = info.keys()
 
 for key in keys:
@@ -38,8 +38,8 @@ umidade = info["umidade"]
 
 if temp > 45:
     print("Alerta! Calor extremo 🥵")
-elif temp * 3 >= umidade:
-    print("Alerta! Perigo de calor úmido")
+elif temp > 30 and temp * 3 >= umidade:
+    print("Alerta! 🥵 Perigo de calor úmido")
 elif temp >= 10 and temp <= 30:
     print("Normal😁")
 elif temp >= 0 and temp <= 10:
