@@ -31,9 +31,18 @@ __author__ = "Alberto"
 
 import sys
 
+arguments = sys.argv[1:]    
+
+valid_operations = {
+    "sum": lambda a, b: a + b, 
+    "sub": lambda a, b: a - b,
+    "mul": lambda a, b: a * b,
+    "div": lambda a, b: a / b,
+}
+
+
 
 while True:
-    arguments = sys.argv[1:]    
     # Validação
     if not arguments:
         operation = input("operação:")
@@ -47,7 +56,6 @@ while True:
 
     operation, *nums = arguments
 
-    valid_operations = ("sum", "sub", "mul", "div")
 
     if operation not in valid_operations:
         print("Operação inválida")
@@ -57,7 +65,6 @@ while True:
     print(nums)
     validated_nums = []
     for num in nums:
-    # TODO: Repetição com while + Exceptions
         if not num.replace(".","").isdigit():
             print(f"Número inválido {num}")
             sys.exit(1)
@@ -71,18 +78,11 @@ while True:
     # Desempacota para ficar mais fácil de utilizar
     numero01, numero02 = validated_nums
 
-    # TODO: Usar dicionário de funções
-    if operation == "sum":
-        result = numero01 + numero02
-    elif operation == "sub":
-        result = numero01 - numero02
-    elif operation == "mul":
-        result = numero01 * numero02
-    elif operation == "div":
-        result = numero01 / numero02
-
+    result = valid_operations[operation](numero01, numero02)
     print(f"O resultado é {result}")
 
+    arguments = []
+    
     continuar = input(f"Quer fazer nova operação? [N/y]").strip().lower()
     if continuar != "y":
         break

@@ -36,7 +36,6 @@ from datetime import datetime
 
 arguments = sys.argv[1:]
 
-
 # Validação
 if not arguments:
     operation = input("operação:")
@@ -78,22 +77,20 @@ except ValueError as e:
     sys.exit(1) 
 
 
-# TODO: Usar dicionário de funções
-if operation == "sum":
-    result = numero01 + numero02
-elif operation == "sub":
-    result = numero01 - numero02
-elif operation == "mul":
-    result = numero01 * numero02
-elif operation == "div":
-    result = numero01 / numero02
-
-
 path = os.curdir
 filepath = os.path.join(path, "prefixcalc.log")
 timestamp = datetime.now().isoformat()
 user = os.getenv('USER', 'anonymous')
 
+valid_operations = {
+    "sum": lambda a, b: a + b, 
+    "sub": lambda a, b: a - b,
+    "mul": lambda a, b: a * b,
+    "div": lambda a, b: a / b,
+}
+
+
+result = valid_operations[operation](numero01, numero02)
 print(f"O resultado é {result}")
 
 try:

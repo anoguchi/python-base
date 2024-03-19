@@ -16,23 +16,40 @@ temp menor que 0: ALERTA! Frio extremo.
 """
 import sys
 import logging
+
 log = logging.Logger("Alerta")
 
 info = {
     "temperatura": None,
     "umidade": None
-}   
+}
 
-# Não podemos add ou del keys,só podemos alterar os valores
-keys = info.keys()
+def is_completely_filled(dict_of_inputs):
+    """Returns a boolean telling if a dict is completely filled."""
+    info_size = len(dict_of_inputs)
+    print(info_size)
+    filled_size = len(
+        [value for value in dict_of_inputs.values() if value is not None]
+    )
+    return info_size == filled_size
 
-for key in keys:
-    try:
-        info[key] = float(input(f"Qual a {key}? ").strip())
-    except ValueError:
-        log.error(f"{key.capitalize()} inválida")
-        sys.exit(1)
 
+def read_inputs_for_dict(dict_of_info):
+    """Reads information for a dict from user input."""
+    for key in dict_of_info:
+        if dict_of_info[key] is not None:
+            continue
+        try:
+            info[key] = float(input(f"Qual a {key}? ").strip())
+        except ValueError:
+            log.error(f"{key.capitalize()} inválida")
+            break # Parar o for
+
+
+while not is_completely_filled(info):
+
+    read_inputs_for_dict(info)
+    
 temp = info["temperatura"]
 umidade = info["umidade"]
 

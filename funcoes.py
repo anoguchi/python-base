@@ -41,7 +41,7 @@ def heron(a, b, c):
     area = s * (s - a) * (s - b) * (s - c)
     return area ** 0.5
 
-# Muito comum aum função dar apoio a outra.
+# Muito comum uma função dar apoio a outra.
 def heron2(params):
     return heron(*params)
 
